@@ -14,9 +14,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -79,6 +81,8 @@ fun Content(){
         BotonSwitch()
         Space()
         DarkMode()
+        Space()
+        FloatingAction()
     }
 }
 
@@ -145,6 +149,17 @@ fun DarkMode(){
         Icon(imageVector = Icons.Outlined.Star, contentDescription ="DarkMode" )
         Spacer(modifier = Modifier.width(5.dp))
         Text(text = "Dark Mode", fontSize = 30.sp)
+    }
+}
+
+@Composable
+fun FloatingAction(){
+    FloatingActionButton(onClick = { /*TODO*/ },
+        containerColor = Color.Blue,
+        contentColor = Color.White
+        ) {
+    Icon(Icons.Filled.Add , contentDescription = "",
+        modifier = Modifier.size(30.dp))
     }
 }
 
